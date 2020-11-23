@@ -65,6 +65,7 @@
 **Решение**: 
 
 Подключим библиотеку biblib:
+
 **settings.gradle**: 
 ```
 include ':biblib'
@@ -156,7 +157,9 @@ dependencies {
 </LinearLayout>
 ```
 
+
 Создание RecyclerView в Activity:
+
 В созданном экземпляре RecyclerView мы должны установить LayoutManager. LayoutManager отображает список в определённой форме. В данном случае используется LinearLayoutManager, который показывает данные в простом списке – вертикальном или горизонтальном (по умолчанию вертикальном). 
 ```
 package com.example.task_2
@@ -182,7 +185,9 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+
 Создание класса BiblibAdapter:
+
  Класс обеспечивает привязку данных библиотеки Biblib к View (в данном случае TextView), которые отображает RecyclerView. В конструкторе класса InputStreamReader() читает файл .bib, создаётся экземпляр класса BibDatabase(). BibLibAdapter содержит в себе класс ViewHolder, который отвечает за отображение данных в TextView. Также необходимо переопределить некоторые методы:
 
 - getItemCount() возвращает общее количество элементов списка
@@ -244,7 +249,8 @@ class BiblibAdapter(inputStream: InputStream): RecyclerView.Adapter<BiblibAdapte
 }
 ```
 
-Получилось такое риложение:
+Получилось такое приложение:
+
 ![image_task2](https://github.com/Julia0028/android_lab_4/blob/master/pictures/2.png)
 
 
